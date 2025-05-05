@@ -13,7 +13,7 @@ const Navbar = () => {
         <h1 className="text-xl font-bold text-[#111827] dark:text-white">Gideon</h1>
 
         {/* Desktop Navigation */}
-        <div className="hidden sm:flex items-center gap-4">
+        <div className="hidden nav:flex items-center gap-4">
           <ul className="flex gap-6 text-sm font-medium">
             {sections.map((section, index) => (
               <li key={section}>
@@ -45,7 +45,7 @@ const Navbar = () => {
         {/* Mobile Toggle */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="sm:hidden text-[#111827] dark:text-[#ccd6f6] p-2"
+          className="nav:hidden text-[#111827] dark:text-[#ccd6f6] p-2"
           aria-label="Toggle menu"
         >
           {menuOpen ? <XMarkIcon className="w-6 h-6" /> : <Bars3Icon className="w-6 h-6" />}
@@ -54,7 +54,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="sm:hidden bg-white dark:bg-dark-background px-6 pb-6 pt-2 text-[#111827] dark:text-[#ccd6f6]">
+        <div className="nav:hidden bg-white dark:bg-dark-background px-6 pb-6 pt-2 text-[#111827] dark:text-[#ccd6f6]">
           <ul className="flex flex-col gap-4 text-sm font-medium">
             {sections.map((section, index) => (
               <li key={section}>

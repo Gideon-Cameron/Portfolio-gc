@@ -2,7 +2,7 @@ import { FaGithub, FaLinkedin, FaTelegram } from "react-icons/fa";
 
 const LeftSidebar = () => {
   return (
-    <div className="hidden lg:flex fixed bottom-0 left-8 flex-col items-center space-y-4">
+    <div className="hidden nav:flex fixed bottom-0 left-0 pl-4 pr-2 flex-col items-center space-y-6 z-40">
       <a
         href="https://github.com/Gideon-Cameron"
         target="_blank"
@@ -27,7 +27,7 @@ const LeftSidebar = () => {
       >
         <FaTelegram className="w-5 h-5" />
       </a>
-      <div className="w-[2px] h-24 bg-[#111827] dark:bg-[#ccd6f6] mt-6 mb-2" />
+      <div className="w-[2px] h-32 bg-[#111827] dark:bg-[#ccd6f6] mt-6 mb-2" />
     </div>
   );
 };

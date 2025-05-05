@@ -18,7 +18,7 @@ const App = () => {
 
       
 
-      <main className="pt-20 space-y-32 px-6 md:px-12">
+      <main className="pt-10 space-y-32 px-6 nav:pl-20 md:px-12">
         <section id="hero">
           <Hero />
         </section>

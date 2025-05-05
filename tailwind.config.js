@@ -4,6 +4,9 @@ export default {
   darkMode: "class", // Enables manual dark mode toggling
   theme: {
     extend: {
+      screens: {
+        nav: "738px", // 👈 Custom breakpoint for navbar collapse
+      },
       colors: {
         // Dark mode (based on Brittany Chiang)
         dark: {
