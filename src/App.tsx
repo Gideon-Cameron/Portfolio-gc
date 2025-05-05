@@ -1,19 +1,22 @@
-import React from "react";
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Experience from "./components/Experience";
-import Skills from "./components/Skills";
-import Projects from "./components/Projects";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
+// import Hero from "./components/Hero";
+// import About from "./components/About";
+// import Experience from "./components/Experience";
+// import Skills from "./components/Skills";
+// import Projects from "./components/Projects";
+// import Contact from "./components/Contact";
+// import Footer from "./components/Footer";
 
-const App: React.FC = () => {
+const App = () => {
   return (
-    <div className="bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100">
+    <div className="bg-light-background text-light-textPrimary dark:bg-dark-background dark:text-dark-textPrimary transition-colors duration-300 font-sans">
       <Navbar />
 
-      <main className="pt-20 space-y-32 px-6 md:px-12">
+      <p className="text-center mt-10 text-lg font-semibold">
+        Theme test: <span className="text-[#64ffda]">This text should change color when theme toggles</span>
+      </p>
+
+      {/* <main className="pt-20 space-y-32 px-6 md:px-12">
         <section id="hero">
           <Hero />
         </section>
@@ -37,9 +40,9 @@ const App: React.FC = () => {
         <section id="contact">
           <Contact />
         </section>
-      </main>
+      </main> */}
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
