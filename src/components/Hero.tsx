@@ -13,7 +13,7 @@ const Hero = () => {
           I build things for the web.
         </h2>
   
-        <p className="text-base sm:text-lg md:text-xl leading-relaxed text-[#111827] dark:text-[#ccd6f6] max-w-2xl">
+        <p className="text-base sm:text-lg md:text-xl leading-relaxed text-[#111827] dark:text-[#8892b0] max-w-2xl">
           I'm a frontend developer specializing in building (and occasionally designing) exceptional, responsive,
           high-performance digital experiences. <br />
           Currently, I’m focused on building accessible, well designed and user friendly projects.

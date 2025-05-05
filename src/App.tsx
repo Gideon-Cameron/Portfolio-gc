@@ -2,7 +2,7 @@ import Navbar from "./components/Navbar";
 import LeftSidebar from "./components/LeftSidebar";
 // import RightSidebar from "./components/RightSidebar";
 import Hero from "./components/Hero";
-// import About from "./components/About";
+import About from "./components/About";
 // import Experience from "./components/Experience";
 // import Skills from "./components/Skills";
 // import Projects from "./components/Projects";
@@ -18,16 +18,16 @@ const App = () => {
 
       
 
-      <main className="pt-10 space-y-32 px-6 nav:pl-20 md:px-12">
+      <main className="pt-10 space-y-22 px-6 nav:pl-20 md:px-12">
         <section id="hero">
           <Hero />
         </section>
 
-        {/* <section id="about">
+         <section id="about">
           <About />
         </section>
 
-        <section id="experience">
+        {/*<section id="experience">
           <Experience />
         </section>
 
