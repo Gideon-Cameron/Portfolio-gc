@@ -1,54 +1,43 @@
-# React + TypeScript + Vite
+# Gideon Cameron — Developer Portfolio 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9f3c2b34-3d5e-4d89-a6e3-bcb8c3fd0a1a/deploy-status)](https://gideon-portfolio-gc.netlify.app/)
+![GitHub last commit](https://img.shields.io/github/last-commit/Gideon-Cameron/your-repo-name?color=64ffda)
+![GitHub repo size](https://img.shields.io/github/repo-size/Gideon-Cameron/your-repo-name?color=007acc)
 
-Currently, two official plugins are available:
+## 🌐 Live Site
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🔗 [gideon-portfolio-gc.netlify.app](https://gideon-portfolio-gc.netlify.app/)
 
-## Expanding the ESLint configuration
+## 🧩 About
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+This is my personal developer portfolio, designed and built from scratch using:
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- **React + TypeScript**
+- **Tailwind CSS**
+- Fully responsive layout
+- Dark-mode–first UI
+- Smooth scroll navigation
+- Animated project modals and section transitions
+- EmailJS-powered contact form
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🚀 Lighthouse Score (Latest Audit)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+| Metric          | Score |
+|------------------|-------|
+| Performance      | 98 ✅ |
+| Accessibility    | 100 ✅ |
+| Best Practices   | 100 ✅ |
+| SEO              | 100 ✅ |
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+Audited using Chrome DevTools Lighthouse, Desktop mode.
+
+## 🖥️ Tech Stack
+
+- **React + Vite**
+- **TypeScript**
+- **Tailwind CSS**
+- **EmailJS** (for contact form)
+- **Netlify** (for deployment)
+
+## 📂 Folder Structure
+
