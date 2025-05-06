@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
-  darkMode: "class", // Enables manual dark mode toggling
+  darkMode: "class", // ✔ keep enabled for future use
   theme: {
     extend: {
       screens: {
@@ -16,7 +16,7 @@ export default {
           accent: "#64ffda",
           border: "#233554",
         },
-        // Light mode (minimal neutral scheme)
+        // Light mode (neutral, optional for later)
         light: {
           background: "#fdfdfd",
           textPrimary: "#111827",

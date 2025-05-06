@@ -1,6 +1,5 @@
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import { FaLinkedin, FaTelegram, FaGithub, FaPhone } from "react-icons/fa";
 
 const Contact = () => {
   const form = useRef<HTMLFormElement>(null);
@@ -101,33 +100,6 @@ const Contact = () => {
           {error && <p className="text-red-500 mt-2">❌ {error}</p>}
         </form>
       )}
-
-      {/* Social Links */}
-      <div className="mt-12 flex justify-center gap-6 text-2xl">
-        <a href="https://www.linkedin.com/in/gideon-cameron-335801263/" target="_blank">
-          <FaLinkedin className="hover:text-[#64ffda] transition text-[#8892b0]" />
-        </a>
-        <a href="https://t.me/gideonwork1" target="_blank">
-          <FaTelegram className="hover:text-[#64ffda] transition text-[#8892b0]" />
-        </a>
-        <a href="https://github.com/Gideon-Cameron" target="_blank">
-          <FaGithub className="hover:text-[#64ffda] transition text-[#8892b0]" />
-        </a>
-        <a href="tel:+251980277582">
-          <FaPhone className="hover:text-[#64ffda] transition text-[#8892b0]" />
-        </a>
-      </div>
-
-      {/* Resume Button */}
-      <div className="mt-10">
-        <a
-          href="/resume.pdf"
-          download="Gideon-Resume.pdf"
-          className="px-6 py-2 border border-[#64ffda] text-[#64ffda] rounded hover:bg-[#64ffda]/10 transition"
-        >
-          Download Resume
-        </a>
-      </div>
     </section>
   );
 };
