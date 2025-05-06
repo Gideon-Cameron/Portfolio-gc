@@ -3,7 +3,7 @@ import LeftSidebar from "./components/LeftSidebar";
 // import RightSidebar from "./components/RightSidebar";
 import Hero from "./components/Hero";
 import About from "./components/About";
-// import Experience from "./components/Experience";
+import Experience from "./components/Experience";
 // import Skills from "./components/Skills";
 // import Projects from "./components/Projects";
 // import Contact from "./components/Contact";
@@ -27,11 +27,11 @@ const App = () => {
           <About />
         </section>
 
-        {/*<section id="experience">
+        <section id="experience">
           <Experience />
         </section>
 
-        <section id="skills">
+        {/*<section id="skills">
           <Skills />
         </section>
 
