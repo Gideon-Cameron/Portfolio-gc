@@ -1,4 +1,6 @@
 import { useState } from "react";
+import icon from "../assets/icon.png"
+
 // import ThemeToggle from "./ThemeToggle";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 
@@ -10,7 +12,7 @@ const Navbar = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-dark-background shadow-md transition-colors duration-300">
       <nav className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <img src="/src/assets/Icon.png" alt="Logo" className="w-12 h-12" />
+      <img src={icon} alt="Logo" className="w-12 h-12" />
 
         {/* Desktop Navigation */}
         <div className="hidden nav:flex items-center gap-4">

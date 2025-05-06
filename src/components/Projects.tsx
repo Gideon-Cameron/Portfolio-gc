@@ -1,5 +1,13 @@
 import { useState } from "react";
 
+// ✅ Import images directly so Vite resolves them correctly
+import spaceTourismImg from "../assets/space-tourism.png";
+import devDashImg from "../assets/dev-dash.png";
+import weatherAppImg from "../assets/weather-app.png";
+import fluentwaveImg from "../assets/fluentwave.png";
+import jobTrackerImg from "../assets/job-tracker.png";
+import calculatorImg from "../assets/calculator-app.png";
+
 type Project = {
   id: number;
   name: string;
@@ -13,7 +21,7 @@ const projects: Project[] = [
   {
     id: 1,
     name: "Space Tourism Website",
-    image: "/src/assets/space-tourism.png",
+    image: spaceTourismImg,
     description:
       "A beautifully designed, multi-page website that simulates a real-world space tourism brand. Built using advanced responsive techniques with modern CSS and React routing, it includes animated transitions, tabbed content, and pixel-perfect layouts. Emphasis was placed on accessibility, semantic HTML, and mobile performance. Ideal for demonstrating front-end precision and design fidelity.",
     github: "https://github.com/Gideon-Cameron/Space-Tourism",
@@ -22,7 +30,7 @@ const projects: Project[] = [
   {
     id: 2,
     name: "Dev Dash",
-    image: "/src/assets/dev-dash.png",
+    image: devDashImg,
     description:
       "Dev Dash is a developer productivity dashboard that integrates GitHub stats, motivational quotes, and custom tools all in one place. Built with TypeScript and React, it uses GitHub’s REST API and features persistent user state, theme toggling, and clean modular UI. It demonstrates full project structuring, API data management, and polished UI/UX workflow across components.",
     github: "https://github.com/Gideon-Cameron/Dev-Dash",
@@ -31,7 +39,7 @@ const projects: Project[] = [
   {
     id: 3,
     name: "React Weather App",
-    image: "/src/assets/weather-app.png",
+    image: weatherAppImg,
     description:
       "A responsive weather dashboard built with React and the OpenWeather API. Users can search any city and receive real-time temperature, humidity, wind, and condition data. Designed with mobile-first principles and graceful error handling for unknown locations or API issues. Highlights include stateful search, dynamic theming, and external data integration with user-friendly visuals.",
     github: "https://github.com/Gideon-Cameron/React-Weather-App",
@@ -40,7 +48,7 @@ const projects: Project[] = [
   {
     id: 4,
     name: "Fluentwave Beta",
-    image: "/src/assets/fluentwave.png",
+    image: fluentwaveImg,
     description:
       "Fluentwave is a full-stack language learning platform that gamifies study through XP points, progress tracking, and authentication. Built with MERN stack (MongoDB, Express, React, Node), it uses JWT for secure auth and React Router for seamless transitions. It features quiz logic, dynamic UI, and user dashboards — offering strong backend and frontend integration.",
     github: "https://github.com/Gideon-Cameron/Fluentwave-beta",
@@ -49,7 +57,7 @@ const projects: Project[] = [
   {
     id: 5,
     name: "Job Tracker",
-    image: "/src/assets/job-tracker.png",
+    image: jobTrackerImg,
     description:
       "A Kanban-style job application manager that helps users organize job search efforts. Includes categories like 'Applied', 'Interviewing', and 'Offer', with drag-and-drop UX, dynamic state updates, and local persistence. Built with React and TypeScript, it emphasizes component reuse, state logic clarity, and real-world productivity use cases.",
     github: "https://github.com/Gideon-Cameron/Job-Tracker",
@@ -58,7 +66,7 @@ const projects: Project[] = [
   {
     id: 6,
     name: "Calculator App",
-    image: "/src/assets/calculator-app.png",
+    image: calculatorImg,
     description:
       "A modern calculator app with full arithmetic support, keyboard input, responsive layout, and dark/light theming. Built using React and Tailwind CSS, it focuses on both utility and UI polish. Internal logic separates display formatting from calculation operations, showcasing a well-organized React component and event handling strategy.",
     github: "https://github.com/Gideon-Cameron/Calculator-app",
@@ -145,7 +153,6 @@ const Projects = () => {
             className="bg-white dark:bg-[#0a192f] rounded-lg p-6 max-w-4xl w-full shadow-xl relative flex flex-col md:flex-row gap-6"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Modal Image */}
             <div className="md:w-[45%] bg-[#f1f5f9] dark:bg-[#112240] rounded">
               <div className="p-[5px]">
                 <img
@@ -156,7 +163,6 @@ const Projects = () => {
               </div>
             </div>
 
-            {/* Modal Details */}
             <div className="flex-1 text-[#111827] dark:text-[#ccd6f6]">
               <h3 className="text-2xl font-semibold mb-4">{selected.name}</h3>
               <p className="mb-6 text-[#4b5563] dark:text-[#8892b0]">{selected.description}</p>
