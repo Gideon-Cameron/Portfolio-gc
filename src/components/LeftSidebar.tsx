@@ -27,18 +27,23 @@ const LeftSidebar = () => {
     <div className="hidden nav:flex fixed bottom-0 left-0 pl-4 pr-2 flex-col items-center space-y-6 z-40">
       {icons.map((item, index) => (
         <motion.a
-          key={item.id}
-          href={item.href}
-          target="_blank"
-          rel="noopener noreferrer"
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: index * 0.2 + 0.5, duration: 0.5 }}
-          className="text-gray-600 dark:text-gray-400 hover:text-[#64ffda] transition"
-          aria-label={item.label}
-        >
-          {item.icon}
-        </motion.a>
+        key={item.id}
+        href={item.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: index * 0.2 + 0.5, duration: 0.5 }}
+        whileHover={{
+          color: "#64ffda", 
+          transition: { duration: 0.2 }  // quick color shift on hover
+        }}
+        className="text-gray-600 dark:text-gray-400"
+        aria-label={item.label}
+      >
+        {item.icon}
+      </motion.a>
+      
       ))}
 
       <motion.div
