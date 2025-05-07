@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 const experiences = {
   Freelance: {
@@ -43,21 +44,47 @@ const Experience = () => {
       className="max-w-5xl mx-auto px-6 md:px-12 py-20 md:py-24"
     >
       {/* Section Heading */}
-      <div className="flex items-center mb-12">
+      <motion.div
+        className="flex items-center mb-12"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.1 }}
+        viewport={{ once: true }}
+      >
         <h2 className="text-2xl font-bold text-[#007acc] dark:text-[#64ffda] font-mono whitespace-nowrap">
           <span className="mr-2 font-mono text-[#007acc] dark:text-[#64ffda]">02.</span>
           Where I've Worked
         </h2>
         <div className="h-px ml-5 flex-1 max-w-[300px] bg-[#8892b0] relative -top-[5px]" />
-      </div>
+      </motion.div>
 
       {/* Layout */}
-      <div className="flex flex-col md:flex-row gap-8">
+      <motion.div
+        className="flex flex-col md:flex-row gap-8"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={{
+          visible: {
+            transition: {
+              staggerChildren: 0.15,
+            },
+          },
+        }}
+      >
         {/* Tabs */}
-        <div className="md:w-1/4 border-l border-[#8892b0]">
+        <motion.div
+          className="md:w-1/4 border-l border-[#8892b0]"
+          variants={{ hidden: {}, visible: {} }}
+        >
           <ul className="flex md:flex-col text-sm font-mono">
-            {tabs.map((tab) => (
-              <li key={tab}>
+            {tabs.map((tab, i) => (
+              <motion.li
+                key={tab}
+                initial={{ opacity: 0, x: -15 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: i * 0.1 + 0.2 }}
+              >
                 <button
                   className={`w-full text-left px-4 py-3 transition-colors duration-200 ${
                     activeTab === tab
@@ -68,13 +95,20 @@ const Experience = () => {
                 >
                   {tab}
                 </button>
-              </li>
+              </motion.li>
             ))}
           </ul>
-        </div>
+        </motion.div>
 
         {/* Content */}
-        <div className="md:w-3/4">
+        <motion.div
+          className="md:w-3/4"
+          key={activeTab}
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 10 }}
+          transition={{ duration: 0.5 }}
+        >
           <h3 className="text-xl font-semibold text-[#111827] dark:text-[#ccd6f6]">
             {experiences[activeTab].title}{" "}
             <span className="text-[#007acc] dark:text-[#64ffda]">@ {experiences[activeTab].context}</span>
@@ -84,11 +118,19 @@ const Experience = () => {
           </p>
           <ul className="list-disc ml-5 space-y-2 text-[#4b5563] dark:text-[#8892b0]">
             {experiences[activeTab].points.map((point, i) => (
-              <li key={i} className="leading-relaxed">{point}</li>
+              <motion.li
+                key={i}
+                className="leading-relaxed"
+                initial={{ opacity: 0, x: 10 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: i * 0.1 }}
+              >
+                {point}
+              </motion.li>
             ))}
           </ul>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };

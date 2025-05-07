@@ -1,6 +1,18 @@
+import React from "react"; // ✅ Required for JSX types to work with TypeScript
 import { useState } from "react";
+import {
+  SiHtml5,
+  SiReact,
+  SiTailwindcss,
+  SiTypescript,
+  SiMongodb,
+  SiExpress,
+  SiNodedotjs,
+  SiJsonwebtokens,
+  SiGithub,
+//   SiOpenweathermap,
+} from "react-icons/si";
 
-// ✅ Import images directly so Vite resolves them correctly
 import spaceTourismImg from "../assets/space-tourism.png";
 import devDashImg from "../assets/dev-dash.png";
 import weatherAppImg from "../assets/weather-app.png";
@@ -8,6 +20,7 @@ import fluentwaveImg from "../assets/fluentwave.png";
 import jobTrackerImg from "../assets/job-tracker.png";
 import calculatorImg from "../assets/calculator-app.png";
 
+// ✅ Use React.ReactNode for broader compatibility (includes JSX.Element)
 type Project = {
   id: number;
   name: string;
@@ -15,6 +28,10 @@ type Project = {
   description: string;
   github: string;
   live: string;
+  stack: {
+    name: string;
+    icon: React.ReactNode;
+  }[];
 };
 
 const projects: Project[] = [
@@ -22,57 +39,155 @@ const projects: Project[] = [
     id: 1,
     name: "Space Tourism Website",
     image: spaceTourismImg,
-    description:
-      "A beautifully designed, multi-page website that simulates a real-world space tourism brand. Built using advanced responsive techniques with modern CSS and React routing, it includes animated transitions, tabbed content, and pixel-perfect layouts. Emphasis was placed on accessibility, semantic HTML, and mobile performance. Ideal for demonstrating front-end precision and design fidelity.",
+    description: `
+A multi-page website simulating a futuristic space tourism brand.
+
+🚀 What it does: Provides destination info, crew bios, and vehicle pages using animated tab-based navigation and responsive layouts.
+
+🎯 Problem it solves: Mimics a real-world product site to demonstrate advanced UI fidelity and responsive design.
+
+🧩 My role: Sole developer — handled layout design, accessibility, React routing, and animation logic.
+
+💡 Technical highlights: Pixel-perfect Tailwind styling, accessible tab interfaces, mobile-first design with smooth transitions.
+    `.trim(),
     github: "https://github.com/Gideon-Cameron/Space-Tourism",
     live: "https://space-tourism-main1.netlify.app/",
+    stack: [
+      { name: "HTML", icon: <SiHtml5 className="text-orange-500" /> },
+      { name: "React", icon: <SiReact className="text-sky-400" /> },
+      { name: "TailwindCSS", icon: <SiTailwindcss className="text-teal-400" /> },
+    ],
   },
   {
     id: 2,
     name: "Dev Dash",
     image: devDashImg,
-    description:
-      "Dev Dash is a developer productivity dashboard that integrates GitHub stats, motivational quotes, and custom tools all in one place. Built with TypeScript and React, it uses GitHub’s REST API and features persistent user state, theme toggling, and clean modular UI. It demonstrates full project structuring, API data management, and polished UI/UX workflow across components.",
+    description: `
+A customizable developer dashboard combining GitHub stats, quotes, and personal widgets.
+
+🚀 What it does: Displays user GitHub metrics, dynamic quotes, and remembers UI preferences between sessions.
+
+🎯 Problem it solves: Helps developers stay inspired and track progress in a unified, visually appealing tool.
+
+🧩 My role: Built every feature — from REST API integration and theming logic to UX layout and state management.
+
+💡 Technical highlights: GitHub REST API integration, global theming, persistence with localStorage, modular React components.
+    `.trim(),
     github: "https://github.com/Gideon-Cameron/Dev-Dash",
     live: "https://dev-dash-gc.netlify.app/",
+    stack: [
+      { name: "React", icon: <SiReact className="text-sky-400" /> },
+      { name: "TypeScript", icon: <SiTypescript className="text-blue-500" /> },
+      { name: "TailwindCSS", icon: <SiTailwindcss className="text-teal-400" /> },
+      { name: "GitHub API", icon: <SiGithub className="text-gray-300" /> },
+    ],
   },
   {
     id: 3,
     name: "React Weather App",
     image: weatherAppImg,
-    description:
-      "A responsive weather dashboard built with React and the OpenWeather API. Users can search any city and receive real-time temperature, humidity, wind, and condition data. Designed with mobile-first principles and graceful error handling for unknown locations or API issues. Highlights include stateful search, dynamic theming, and external data integration with user-friendly visuals.",
+    description: `
+A real-time weather app using the OpenWeather API.
+
+🚀 What it does: Lets users search cities and view live weather data — temperature, humidity, wind speed, and more.
+
+🎯 Problem it solves: Offers instant access to weather with simple UI and fallback handling for edge cases.
+
+🧩 My role: Developed API integration, UI state transitions, loading/error handling, and responsive layout.
+
+💡 Technical highlights: OpenWeather API, responsive grid, dynamic icons, input validation.
+    `.trim(),
     github: "https://github.com/Gideon-Cameron/React-Weather-App",
     live: "https://weather-app-xy.netlify.app/",
+    stack: [
+      { name: "React", icon: <SiReact className="text-sky-400" /> },
+      { name: "TailwindCSS", icon: <SiTailwindcss className="text-teal-400" /> },
+    //   { name: "OpenWeather API", icon: <SiOpenweathermap className="text-yellow-500" /> },
+    ],
   },
   {
     id: 4,
     name: "Fluentwave Beta",
     image: fluentwaveImg,
-    description:
-      "Fluentwave is a full-stack language learning platform that gamifies study through XP points, progress tracking, and authentication. Built with MERN stack (MongoDB, Express, React, Node), it uses JWT for secure auth and React Router for seamless transitions. It features quiz logic, dynamic UI, and user dashboards — offering strong backend and frontend integration.",
+    description: `
+A gamified language learning platform built as a full-stack web app.
+
+🚀 What it does: Lets users log in, take quizzes, earn XP, and track progress through a dynamic dashboard.
+
+🎯 Problem it solves: Makes language learning more engaging with gamified features and secure account management.
+
+🧩 My role: Full-stack developer — built backend, REST APIs, JWT auth, protected routes, and frontend UI/UX.
+
+💡 Technical highlights: MERN stack, JWT authentication, protected routes, real-time score tracking.
+    `.trim(),
     github: "https://github.com/Gideon-Cameron/Fluentwave-beta",
     live: "https://fluentwave-beta.netlify.app/",
+    stack: [
+      { name: "MongoDB", icon: <SiMongodb className="text-green-500" /> },
+      { name: "Express", icon: <SiExpress className="text-gray-200" /> },
+      { name: "React", icon: <SiReact className="text-sky-400" /> },
+      { name: "Node.js", icon: <SiNodedotjs className="text-green-500" /> },
+      { name: "JWT", icon: <SiJsonwebtokens className="text-yellow-500" /> },
+    ],
   },
   {
     id: 5,
     name: "Job Tracker",
     image: jobTrackerImg,
-    description:
-      "A Kanban-style job application manager that helps users organize job search efforts. Includes categories like 'Applied', 'Interviewing', and 'Offer', with drag-and-drop UX, dynamic state updates, and local persistence. Built with React and TypeScript, it emphasizes component reuse, state logic clarity, and real-world productivity use cases.",
+    description: `
+A drag-and-drop Kanban board for managing job applications.
+
+🚀 What it does: Lets users move job cards between stages like 'Applied', 'Interviewing', and 'Offer'.
+
+🎯 Problem it solves: Keeps job seekers visually organized with persistent drag-and-drop state.
+
+🧩 My role: Implemented full UI logic, styled interaction feedback, and component state reuse.
+
+💡 Technical highlights: Drag-and-drop interaction, React component structure, localStorage persistence.
+    `.trim(),
     github: "https://github.com/Gideon-Cameron/Job-Tracker",
     live: "https://job-trackerz.netlify.app/",
+    stack: [
+      { name: "React", icon: <SiReact className="text-sky-400" /> },
+      { name: "TypeScript", icon: <SiTypescript className="text-blue-500" /> },
+      { name: "TailwindCSS", icon: <SiTailwindcss className="text-teal-400" /> },
+    ],
   },
   {
     id: 6,
     name: "Calculator App",
     image: calculatorImg,
-    description:
-      "A modern calculator app with full arithmetic support, keyboard input, responsive layout, and dark/light theming. Built using React and Tailwind CSS, it focuses on both utility and UI polish. Internal logic separates display formatting from calculation operations, showcasing a well-organized React component and event handling strategy.",
+    description: `
+A clean, responsive calculator with keyboard input and theming.
+
+🚀 What it does: Offers full arithmetic calculations with light/dark theming and keyboard shortcuts.
+
+🎯 Problem it solves: Demonstrates thoughtful UI design and precise logic control.
+
+🧩 My role: Built layout, key binding logic, display formatting, and mobile responsiveness.
+
+💡 Technical highlights: Keyboard event handling, conditional theming, separation of UI/logic.
+    `.trim(),
     github: "https://github.com/Gideon-Cameron/Calculator-app",
     live: "https://calculator-app-xl.netlify.app/",
+    stack: [
+      { name: "React", icon: <SiReact className="text-sky-400" /> },
+      { name: "TypeScript", icon: <SiTypescript className="text-blue-500" /> },
+      { name: "TailwindCSS", icon: <SiTailwindcss className="text-teal-400" /> },
+    ],
   },
 ];
+
+  
+
+const oneLiners: Record<number, string> = {
+  1: "A slick multi-page website mimicking a luxury space travel company.",
+  2: "Your all-in-one productivity dashboard tailored for developers.",
+  3: "Check the weather anywhere with real-time updates and dynamic visuals.",
+  4: "Gamified language learning powered by full-stack tech.",
+  5: "Organize your job hunt with an intuitive Kanban board system.",
+  6: "A clean, responsive calculator with keyboard support and theming.",
+};
 
 const Projects = () => {
   const [selected, setSelected] = useState<Project | null>(null);
@@ -112,6 +227,9 @@ const Projects = () => {
               <h3 className="text-lg font-semibold text-[#111827] dark:text-[#ccd6f6]">
                 {project.name}
               </h3>
+              <p className="text-sm text-[#4b5563] dark:text-[#8892b0] italic">
+                {oneLiners[project.id]}
+              </p>
               <button
                 onClick={() => setSelected(project)}
                 className="text-sm text-[#007acc] dark:text-[#64ffda] hover:opacity-80 cursor-pointer transition"

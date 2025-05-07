@@ -1,7 +1,6 @@
 import { useState } from "react";
-import icon from "../assets/icon.png"
-
-// import ThemeToggle from "./ThemeToggle";
+import { motion } from "framer-motion";
+import icon from "../assets/icon.png";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 
 const sections = ["About", "Experience", "Skills", "Projects", "Contact"];
@@ -12,13 +11,38 @@ const Navbar = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-dark-background shadow-md transition-colors duration-300">
       <nav className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <img src={icon} alt="Logo" className="w-12 h-12" />
+        {/* Logo */}
+        <motion.img
+          src={icon}
+          alt="Logo"
+          className="w-12 h-12"
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1, duration: 0.5 }}
+        />
 
         {/* Desktop Navigation */}
-        <div className="hidden nav:flex items-center gap-4">
+        <motion.ul
+          className="hidden nav:flex items-center gap-4"
+          initial="hidden"
+          animate="visible"
+          variants={{
+            visible: {
+              transition: {
+                staggerChildren: 0.1,
+              },
+            },
+          }}
+        >
           <ul className="flex gap-6 text-sm font-medium">
             {sections.map((section, index) => (
-              <li key={section}>
+              <motion.li
+                key={section}
+                variants={{
+                  hidden: { opacity: 0, y: -10 },
+                  visible: { opacity: 1, y: 0 },
+                }}
+              >
                 <a
                   href={`#${section.toLowerCase()}`}
                   className="group transition-colors duration-200 text-[#111827] dark:text-[#ccd6f6] hover:text-[#007acc] dark:hover:text-[#64ffda]"
@@ -28,9 +52,14 @@ const Navbar = () => {
                   </span>
                   {section}
                 </a>
-              </li>
+              </motion.li>
             ))}
-            <li>
+            <motion.li
+              variants={{
+                hidden: { opacity: 0, y: -10 },
+                visible: { opacity: 1, y: 0 },
+              }}
+            >
               <a
                 href="/resume.pdf"
                 download
@@ -38,11 +67,9 @@ const Navbar = () => {
               >
                 Resume
               </a>
-            </li>
+            </motion.li>
           </ul>
-
-          {/* <ThemeToggle />  Is being considered as a futer feature*/}
-        </div>
+        </motion.ul>
 
         {/* Mobile Toggle */}
         <button
@@ -81,9 +108,6 @@ const Navbar = () => {
               >
                 Resume
               </a>
-            </li>
-            <li>
-              {/* <ThemeToggle /> Is being considered as a futer feature */}
             </li>
           </ul>
         </div>
