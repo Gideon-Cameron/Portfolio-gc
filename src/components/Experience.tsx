@@ -29,6 +29,8 @@ const experiences = {
     points: [
       "Built several full-stack applications to improve personal productivity.",
       "Explored advanced React patterns, performance optimization, and deployment pipelines.",
+      "Designed and developed high-fidelity frontend UIs with React, TypeScript, and Tailwind CSS.",
+      "Completed projects like Space Tourism and Weather App to demonstrate responsive layout, accessibility, and component-driven design.",
     ],
   },
 };
