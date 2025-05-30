@@ -47,7 +47,7 @@ const Contact = () => {
         viewport={{ once: true }}
       >
         <h2 className="text-2xl font-bold text-[#007acc] dark:text-[#64ffda] font-mono whitespace-nowrap">
-          <span className="mr-2 font-mono text-[#007acc] dark:text-[#64ffda]">05.</span>
+          <span className="mr-2 font-mono text-[#007acc] dark:text-[#64ffda]">06.</span>
           What’s Next?
         </h2>
         <div className="h-px ml-5 flex-1 max-w-[300px] bg-[#8892b0] relative -top-[5px]" />
