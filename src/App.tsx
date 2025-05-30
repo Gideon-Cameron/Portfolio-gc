@@ -8,6 +8,7 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import Testimonial from "./components/Testimonial";
 
 const App = () => {
   return (
@@ -37,6 +38,10 @@ const App = () => {
 
         <section id="projects">
           <Projects />
+        </section>
+
+        <section id="testimonials">
+          <Testimonial />
         </section>
 
         <section id="contact">
