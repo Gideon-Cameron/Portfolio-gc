@@ -24,7 +24,7 @@ This is my personal developer portfolio, designed and built from scratch using:
 
 | Metric          | Score |
 |------------------|-------|
-| Performance      | 98 ✅ |
+| Performance      | 95 ✅ |
 | Accessibility    | 100 ✅ |
 | Best Practices   | 100 ✅ |
 | SEO              | 100 ✅ |
