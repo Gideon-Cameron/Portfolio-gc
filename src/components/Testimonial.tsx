@@ -57,14 +57,14 @@ const Testimonial = () => {
               <a
                 href="https://www.linkedin.com/in/ariel-candace-646494272/"
                 target="_blank"
-                className="text-sm text-[#64ffda] underline hover:opacity-80"
+                className="text-sm text-[#64ffda] hover:opacity-80"
               >
                 View on LinkedIn
               </a>
               <a
                 href="https://ariel-portfolio-ac.netlify.app/"
                 target="_blank"
-                className="text-sm text-[#64ffda] underline hover:opacity-80"
+                className="text-sm text-[#64ffda] hover:opacity-80"
               >
                 View Project
               </a>
