@@ -1,6 +1,5 @@
 import Navbar from "./components/Navbar";
 import LeftSidebar from "./components/LeftSidebar";
-// import RightSidebar from "./components/RightSidebar";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Experience from "./components/Experience";
@@ -14,7 +13,6 @@ const App = () => {
   return (
     <div className="bg-light-background text-light-textPrimary dark:bg-dark-background dark:text-dark-textPrimary transition-colors duration-300 font-sans">
       <LeftSidebar />
-      {/* <RightSidebar /> */}
       <Navbar />
 
       
