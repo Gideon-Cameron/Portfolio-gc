@@ -3,7 +3,8 @@ import { motion } from "framer-motion";
 import icon from "../assets/icon.png";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 
-const sections = ["About", "Experience", "Skills", "Projects", "Contact"];
+// ✅ Testimonials now included
+const sections = ["About", "Experience", "Skills", "Projects", "Testimonials", "Contact"];
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -13,15 +14,14 @@ const Navbar = () => {
       <nav className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
         <motion.img
-  src={icon}
-  alt="Logo"
-  className="w-12 h-12 cursor-pointer"
-  initial={{ opacity: 0, y: -10 }}
-  animate={{ opacity: 1, y: 0 }}
-  whileHover={{ y: -4, x: -4, rotate: -3 }}
-  transition={{ duration: 0.4, ease: "easeOut" }}
-/>
-
+          src={icon}
+          alt="Logo"
+          className="w-12 h-12 cursor-pointer"
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          whileHover={{ y: -4, x: -4, rotate: -3 }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
+        />
 
         {/* Desktop Navigation */}
         <motion.ul
