@@ -11,6 +11,7 @@ import {
   SiNodedotjs,
   SiJsonwebtokens,
   SiGithub,
+  SiFirebase
 } from "react-icons/si";
 
 import spaceTourismImg from "../assets/space-tourism.png";
@@ -18,7 +19,8 @@ import devDashImg from "../assets/dev-dash.png";
 import weatherAppImg from "../assets/weather-app.png";
 import fluentwaveImg from "../assets/fluentwave.png";
 import jobTrackerImg from "../assets/job-tracker.png";
-import calculatorImg from "../assets/calculator-app.png";
+// import calculatorImg from "../assets/calculator-app.png";
+import portfolio from "../assets/Portfolio.png"
 
 type Project = {
   id: number;
@@ -83,26 +85,29 @@ A customizable developer dashboard combining GitHub stats, quotes, and personal 
   },
   {
     id: 3,
-    name: "React Weather App",
-    image: weatherAppImg,
+    name: "Custom CMS-Enabled Portfolio",
+    image: portfolio,
     description: `
-A real-time weather app using the OpenWeather API.
-
-🚀 What it does: Lets users search cities and view live weather data — temperature, humidity, wind speed, and more.
-
-🎯 Problem it solves: Offers instant access to weather with simple UI and fallback handling for edge cases.
-
-🧩 My role: Developed API integration, UI state transitions, loading/error handling, and responsive layout.
-
-💡 Technical highlights: OpenWeather API, responsive grid, dynamic icons, input validation.
+  A customizable portfolio system with a connected admin CMS.
+  
+  🚀 What it does: Provides clients with a live portfolio website that they can update instantly through an admin dashboard — including text, images, and section visibility.
+  
+  🎯 Problem it solves: Removes the need for a developer every time a client wants to update their portfolio, making it scalable and future-proof.
+  
+  🧩 My role: Designed and developed the portfolio frontend, built the CMS from scratch, implemented Firebase authentication, Firestore data storage, and dynamic rendering.
+  
+  💡 Technical highlights: React, TypeScript, TailwindCSS, Firebase (Auth + Firestore), Netlify hosting, reusable CMS framework for rapid deployment.
     `.trim(),
-    github: "https://github.com/Gideon-Cameron/React-Weather-App",
-    live: "https://weather-app-xy.netlify.app/",
+    github: "https://github.com/Gideon-Cameron/Portfolio-CMS-Component", // update if repo URL is different
+    live: "https://ariels-portfolio.netlify.app/",
     stack: [
       { name: "React", icon: <SiReact className="text-sky-400" /> },
       { name: "TailwindCSS", icon: <SiTailwindcss className="text-teal-400" /> },
+      { name: "TypeScript", icon: <SiTypescript className="text-blue-600" /> },
+      { name: "Firebase", icon: <SiFirebase className="text-yellow-500" /> },
     ],
   },
+  
   {
     id: 4,
     name: "Fluentwave Beta",
@@ -153,24 +158,23 @@ A drag-and-drop Kanban board for managing job applications.
   },
   {
     id: 6,
-    name: "Calculator App",
-    image: calculatorImg,
+    name: "React Weather App",
+    image: weatherAppImg,
     description: `
-A clean, responsive calculator with keyboard input and theming.
+A real-time weather app using the OpenWeather API.
 
-🚀 What it does: Offers full arithmetic calculations with light/dark theming and keyboard shortcuts.
+🚀 What it does: Lets users search cities and view live weather data — temperature, humidity, wind speed, and more.
 
-🎯 Problem it solves: Demonstrates thoughtful UI design and precise logic control.
+🎯 Problem it solves: Offers instant access to weather with simple UI and fallback handling for edge cases.
 
-🧩 My role: Built layout, key binding logic, display formatting, and mobile responsiveness.
+🧩 My role: Developed API integration, UI state transitions, loading/error handling, and responsive layout.
 
-💡 Technical highlights: Keyboard event handling, conditional theming, separation of UI/logic.
+💡 Technical highlights: OpenWeather API, responsive grid, dynamic icons, input validation.
     `.trim(),
-    github: "https://github.com/Gideon-Cameron/Calculator-app",
-    live: "https://calculator-app-xl.netlify.app/",
+    github: "https://github.com/Gideon-Cameron/React-Weather-App",
+    live: "https://weather-app-xy.netlify.app/",
     stack: [
       { name: "React", icon: <SiReact className="text-sky-400" /> },
-      { name: "TypeScript", icon: <SiTypescript className="text-blue-500" /> },
       { name: "TailwindCSS", icon: <SiTailwindcss className="text-teal-400" /> },
     ],
   },
