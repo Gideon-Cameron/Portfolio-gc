@@ -21,6 +21,7 @@ import fluentwaveImg from "../assets/fluentwave.png";
 import jobTrackerImg from "../assets/job-tracker.png";
 // import calculatorImg from "../assets/calculator-app.png";
 import portfolio from "../assets/Portfolio.png"
+import caseStudy from "../assets/caseStudy.pdf"
 
 type Project = {
   id: number;
@@ -335,21 +336,31 @@ const oneLiners: Record<number, string> = {
                 </div>
   
                 <div className="mt-6 flex gap-4">
-                  <a
-                    href={selected.github}
-                    target="_blank"
-                    className="px-4 py-2 border border-[#64ffda] text-[#64ffda] hover:bg-[#64ffda]/10 rounded transition cursor-pointer"
-                  >
-                    Code
-                  </a>
-                  <a
-                    href={selected.live}
-                    target="_blank"
-                    className="px-4 py-2 border border-[#64ffda] text-[#64ffda] hover:bg-[#64ffda]/10 rounded transition cursor-pointer"
-                  >
-                    Preview
-                  </a>
-                </div>
+  <a
+    href={selected.github}
+    target="_blank"
+    className="px-4 py-2 border border-[#64ffda] text-[#64ffda] hover:bg-[#64ffda]/10 rounded transition cursor-pointer"
+  >
+    Code
+  </a>
+  <a
+    href={selected.live}
+    target="_blank"
+    className="px-4 py-2 border border-[#64ffda] text-[#64ffda] hover:bg-[#64ffda]/10 rounded transition cursor-pointer"
+  >
+    Preview
+  </a>
+  {selected && selected.id === 3 && (
+    <a
+      href={caseStudy}
+      download="CMS-Portfolio-Case-Study.pdf"
+      className="px-4 py-2 border border-[#64ffda] text-[#64ffda] hover:bg-[#64ffda]/10 rounded transition cursor-pointer"
+    >
+      Case Study
+    </a>
+  )}
+</div>
+
   
                 <button
                   onClick={handleClose}
