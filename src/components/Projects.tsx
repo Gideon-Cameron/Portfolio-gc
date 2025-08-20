@@ -98,7 +98,7 @@ A customizable developer dashboard combining GitHub stats, quotes, and personal 
   
   💡 Technical highlights: React, TypeScript, TailwindCSS, Firebase (Auth + Firestore), Netlify hosting, reusable CMS framework for rapid deployment.
     `.trim(),
-    github: "https://github.com/Gideon-Cameron/Portfolio-CMS-Component", // update if repo URL is different
+    github: "https://github.com/Gideon-Cameron/Portfolio-CMS-Component", 
     live: "https://ariels-portfolio.netlify.app/",
     stack: [
       { name: "React", icon: <SiReact className="text-sky-400" /> },
