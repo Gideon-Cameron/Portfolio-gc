@@ -65,14 +65,14 @@ A multi-page website simulating a futuristic space tourism brand.
   },
   {
     id: 2,
-    name: "Stat Tracker – Fitness Progress & Global Ranking App",
+    name: "Stat Tracker",
     image: statTrackerImg,
     description: `
-  A fitness tracking web app that allows users to measure their stats across core fitness categories and see how they compare globally.
+  A fitness tracking web app, allows users to measure their stats across fitness categories and see how they compare globally.
   
-  🚀 What it does: Lets users input fitness stats (strength, endurance, speed, skill, flexibility) and provides global ranking tiers (E → Mythic) tied to percentiles. Includes radar charts, sub-ranks with progress indicators, and an overall combined fitness score. Premium users can save weekly snapshots to track long-term progress.
+  🚀 What it does: Lets users input fitness stats (strength, endurance, speed, skill, flexibility) and provides global ranking tiers (E → Mythic) tied to percentiles. 
   
-  🎯 Problem it solves: Many fitness apps only log workouts. Stat Tracker motivates users by showing where they stand globally, turning fitness into a measurable, gamified progression system that works for both beginners and elite athletes.
+  🎯 Problem it solves: Many fitness apps only log workouts. Stat Tracker motivates users by showing where they stand globally, turning fitness into a measurable, gamified progression system.
   
   🧩 My role: Designed and developed the frontend, built ranking calculations and visualizations, implemented snapshot storage, and styled the responsive dark-themed UI.
   
@@ -191,7 +191,7 @@ A real-time weather app using the OpenWeather API.
 const oneLiners: Record<number, string> = {
     1: "A slick multi-page website mimicking a luxury space travel company.",
     2: "Track your fitness stats with global rankings and progress visualizations.",
-  3: "A client-ready portfolio with a built-in CMS for instant updates.",
+    3: "A client-ready portfolio with a built-in CMS for instant updates.",
     4: "Gamified language learning powered by full-stack tech.",
     5: "Organize your job hunt with an intuitive Kanban board system.",
     6: "A clean, responsive calculator with keyboard support and theming.",
