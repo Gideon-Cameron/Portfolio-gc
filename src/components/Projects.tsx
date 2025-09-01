@@ -10,18 +10,20 @@ import {
   SiExpress,
   SiNodedotjs,
   SiJsonwebtokens,
-  SiGithub,
+  // SiGithub,
   SiFirebase
 } from "react-icons/si";
 
 import spaceTourismImg from "../assets/space-tourism.png";
-import devDashImg from "../assets/dev-dash.png";
+// import devDashImg from "../assets/dev-dash.png";
+import statTrackerImg from "../assets/stats-tracker.png"
 import weatherAppImg from "../assets/weather-app.png";
 import fluentwaveImg from "../assets/fluentwave.png";
 import jobTrackerImg from "../assets/job-tracker.png";
 // import calculatorImg from "../assets/calculator-app.png";
 import portfolio from "../assets/Portfolio.png"
-import caseStudy from "../assets/caseStudy.pdf"
+import portfolioCSM from "../assets/portfolioCSM.pdf"
+import statsTracker from "../assets/stats-tracker.pdf"
 
 type Project = {
   id: number;
@@ -30,6 +32,7 @@ type Project = {
   description: string;
   github: string;
   live: string;
+  caseStudy?: string;
   stack: {
     name: string;
     icon: React.ReactNode;
@@ -62,26 +65,27 @@ A multi-page website simulating a futuristic space tourism brand.
   },
   {
     id: 2,
-    name: "Dev Dash",
-    image: devDashImg,
+    name: "Stat Tracker – Fitness Progress & Global Ranking App",
+    image: statTrackerImg,
     description: `
-A customizable developer dashboard combining GitHub stats, quotes, and personal widgets.
-
-🚀 What it does: Displays user GitHub metrics, dynamic quotes, and remembers UI preferences between sessions.
-
-🎯 Problem it solves: Helps developers stay inspired and track progress in a unified, visually appealing tool.
-
-🧩 My role: Built every feature — from REST API integration and theming logic to UX layout and state management.
-
-💡 Technical highlights: GitHub REST API integration, global theming, persistence with localStorage, modular React components.
+  A fitness tracking web app that allows users to measure their stats across core fitness categories and see how they compare globally.
+  
+  🚀 What it does: Lets users input fitness stats (strength, endurance, speed, skill, flexibility) and provides global ranking tiers (E → Mythic) tied to percentiles. Includes radar charts, sub-ranks with progress indicators, and an overall combined fitness score. Premium users can save weekly snapshots to track long-term progress.
+  
+  🎯 Problem it solves: Many fitness apps only log workouts. Stat Tracker motivates users by showing where they stand globally, turning fitness into a measurable, gamified progression system that works for both beginners and elite athletes.
+  
+  🧩 My role: Designed and developed the frontend, built ranking calculations and visualizations, implemented snapshot storage, and styled the responsive dark-themed UI.
+  
+  💡 Technical highlights: React, TypeScript, Vite, TailwindCSS, ECharts for data visualization, Netlify deployment, Firebase for authentication and data persistence.
     `.trim(),
-    github: "https://github.com/Gideon-Cameron/Dev-Dash",
-    live: "https://dev-dash-gc.netlify.app/",
+    github: "https://github.com/Gideon-Cameron/Stat-Tracker", // 👈 replace with your actual repo link
+    live: "https://stat-tracker.netlify.app/", // 👈 replace with your actual live link
+    caseStudy: statsTracker,
     stack: [
       { name: "React", icon: <SiReact className="text-sky-400" /> },
-      { name: "TypeScript", icon: <SiTypescript className="text-blue-500" /> },
+      { name: "TypeScript", icon: <SiTypescript className="text-blue-600" /> },
       { name: "TailwindCSS", icon: <SiTailwindcss className="text-teal-400" /> },
-      { name: "GitHub API", icon: <SiGithub className="text-gray-300" /> },
+      { name: "Firebase", icon: <SiFirebase className="text-yellow-500" /> },
     ],
   },
   {
@@ -101,6 +105,7 @@ A customizable developer dashboard combining GitHub stats, quotes, and personal 
     `.trim(),
     github: "https://github.com/Gideon-Cameron/Portfolio-CMS-Component", 
     live: "https://ariels-portfolio.netlify.app/",
+    caseStudy: portfolioCSM,
     stack: [
       { name: "React", icon: <SiReact className="text-sky-400" /> },
       { name: "TailwindCSS", icon: <SiTailwindcss className="text-teal-400" /> },
@@ -350,16 +355,17 @@ const oneLiners: Record<number, string> = {
   >
     Preview
   </a>
-  {selected && selected.id === 3 && (
+  {selected?.caseStudy && (
     <a
-      href={caseStudy}
-      download="CMS-Portfolio-Case-Study.pdf"
+      href={selected.caseStudy}
+      download={`${selected.name}-Case-Study.pdf`}
       className="px-4 py-2 border border-[#64ffda] text-[#64ffda] hover:bg-[#64ffda]/10 rounded transition cursor-pointer"
     >
       Case Study
     </a>
   )}
 </div>
+
 
   
                 <button
