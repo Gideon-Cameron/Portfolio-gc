@@ -190,8 +190,8 @@ A real-time weather app using the OpenWeather API.
   
 const oneLiners: Record<number, string> = {
     1: "A slick multi-page website mimicking a luxury space travel company.",
-    2: "Your all-in-one productivity dashboard tailored for developers.",
-    3: "Check the weather anywhere with real-time updates and dynamic visuals.",
+    2: "Track your fitness stats with global rankings and progress visualizations.",
+  3: "A client-ready portfolio with a built-in CMS for instant updates.",
     4: "Gamified language learning powered by full-stack tech.",
     5: "Organize your job hunt with an intuitive Kanban board system.",
     6: "A clean, responsive calculator with keyboard support and theming.",
