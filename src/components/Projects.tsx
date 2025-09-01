@@ -78,8 +78,8 @@ A multi-page website simulating a futuristic space tourism brand.
   
   💡 Technical highlights: React, TypeScript, Vite, TailwindCSS, ECharts for data visualization, Netlify deployment, Firebase for authentication and data persistence.
     `.trim(),
-    github: "https://github.com/Gideon-Cameron/Stat-Tracker", // 👈 replace with your actual repo link
-    live: "https://stat-tracker.netlify.app/", // 👈 replace with your actual live link
+    github: "https://github.com/Gideon-Cameron/Project-Stats-beta-v1.3", 
+    live: "https://gideon-portfolio-gc.netlify.app/", // 
     caseStudy: statsTracker,
     stack: [
       { name: "React", icon: <SiReact className="text-sky-400" /> },
